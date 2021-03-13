@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshots button 1`] = `
+<div
+  className="button default"
+  data-testid="button"
+  onClick={[Function]}
+>
+  Click me
+</div>
+`;
+
+exports[`matches snapshots disabled 1`] = `
+<div
+  className="button default disabled "
+  data-testid="button"
+  onClick={[Function]}
+>
+  Button
+</div>
+`;
+
+exports[`matches snapshots size 1`] = `
+<div>
+  <div
+    className="small button default"
+    data-testid="button"
+    onClick={[Function]}
+  >
+    Button
+  </div>
+   
+  <div
+    className="medium button default"
+    data-testid="button"
+    onClick={[Function]}
+  >
+    Button
+  </div>
+   
+  <div
+    className="large button default"
+    data-testid="button"
+    onClick={[Function]}
+  >
+    Button
+  </div>
+</div>
+`;
+
+exports[`matches snapshots variant styles 1`] = `
+<div>
+  <div
+    className="button primary"
+    data-testid="button"
+    onClick={[Function]}
+  >
+    Button
+  </div>
+   
+  <div
+    className="button secondary"
+    data-testid="button"
+    onClick={[Function]}
+  >
+    Button
+  </div>
+   
+  <div
+    className="button link"
+    data-testid="button"
+    onClick={[Function]}
+  >
+    Button
+  </div>
+   
+  <div
+    className="button danger"
+    data-testid="button"
+    onClick={[Function]}
+  >
+    Button
+  </div>
+</div>
+`;

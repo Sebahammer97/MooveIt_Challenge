@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshots disabled 1`] = `
+<div>
+  <input
+    className="input medium default disabled "
+    data-testid="input-number"
+    disabled={true}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseUp={[Function]}
+    placeholder=""
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`matches snapshots formats 1`] = `
+<div>
+  <div>
+    <input
+      className="input medium default"
+      data-testid="input-number"
+      disabled={false}
+      inputMode="numeric"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder="+54 (###) ####-####"
+      type="text"
+      value=""
+    />
+  </div>
+  <div>
+    <input
+      className="input medium default"
+      data-testid="input-number"
+      disabled={false}
+      inputMode="numeric"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder="####-####-####-####"
+      type="text"
+      value=""
+    />
+  </div>
+  <div>
+    <input
+      className="input medium default"
+      data-testid="input-number"
+      disabled={false}
+      inputMode="numeric"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder="DD/MM/YYYY"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`matches snapshots input number 1`] = `
+<div>
+  <input
+    className="input medium default"
+    data-testid="input-number"
+    disabled={false}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseUp={[Function]}
+    placeholder=""
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`matches snapshots prefix 1`] = `
+<div>
+  <div>
+    <input
+      className="input medium default"
+      data-testid="input-number"
+      disabled={false}
+      inputMode="numeric"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`matches snapshots size 1`] = `
+<div>
+  <div>
+    <input
+      className="input small default"
+      data-testid="input-number"
+      disabled={false}
+      inputMode="numeric"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+   
+  <div>
+    <input
+      className="input medium default"
+      data-testid="input-number"
+      disabled={false}
+      inputMode="numeric"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+   
+  <div>
+    <input
+      className="input large default"
+      data-testid="input-number"
+      disabled={false}
+      inputMode="numeric"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`matches snapshots suffix 1`] = `
+<div>
+  <div>
+    <input
+      className="input medium default"
+      data-testid="input-number"
+      disabled={false}
+      inputMode="numeric"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`matches snapshots variant styles 1`] = `
+<div>
+  <div>
+    <input
+      className="input medium dark"
+      data-testid="input-number"
+      disabled={false}
+      inputMode="numeric"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`matches snapshots with reset 1`] = `
+<div>
+  <input
+    className="input medium default"
+    data-testid="input-number"
+    disabled={false}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseUp={[Function]}
+    placeholder=""
+    type="text"
+    value=""
+  />
+</div>
+`;

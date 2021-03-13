@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshots disabled 1`] = `
+<div>
+  <input
+    className="input medium default disabled "
+    data-testid="input-text"
+    disabled={true}
+    maxLength={9999}
+    minLength={0}
+    onChange={[Function]}
+    placeholder=""
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`matches snapshots input text 1`] = `
+<div>
+  <input
+    className="input medium default"
+    data-testid="input-text"
+    disabled={false}
+    maxLength={9999}
+    minLength={0}
+    onChange={[Function]}
+    placeholder=""
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`matches snapshots password 1`] = `
+<div>
+  <input
+    className="input medium default"
+    data-testid="input-text"
+    disabled={false}
+    maxLength={9999}
+    minLength={0}
+    onChange={[Function]}
+    placeholder=""
+    type="password"
+    value=""
+  />
+</div>
+`;
+
+exports[`matches snapshots size 1`] = `
+<div>
+  <div>
+    <input
+      className="input small default"
+      data-testid="input-text"
+      disabled={false}
+      maxLength={9999}
+      minLength={0}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+   
+  <div>
+    <input
+      className="input medium default"
+      data-testid="input-text"
+      disabled={false}
+      maxLength={9999}
+      minLength={0}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+   
+  <div>
+    <input
+      className="input large default"
+      data-testid="input-text"
+      disabled={false}
+      maxLength={9999}
+      minLength={0}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`matches snapshots textarea 1`] = `
+<div>
+  <textarea
+    className="input medium default"
+    data-testid="input-text"
+    disabled={false}
+    maxLength={9999}
+    minLength={0}
+    onChange={[Function]}
+    placeholder=""
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`matches snapshots variant styles 1`] = `
+<div>
+  <div>
+    <input
+      className="input medium dark"
+      data-testid="input-text"
+      disabled={false}
+      maxLength={9999}
+      minLength={0}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`matches snapshots with reset 1`] = `
+<div>
+  <input
+    className="input medium default"
+    data-testid="input-text"
+    disabled={false}
+    maxLength={9999}
+    minLength={0}
+    onChange={[Function]}
+    placeholder=""
+    type="text"
+    value=""
+  />
+</div>
+`;

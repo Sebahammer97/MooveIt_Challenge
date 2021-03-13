@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshots autocomplete 1`] = `
+<div
+  className="search"
+>
+  <input
+    className="search-box"
+    data-testid="autocomplete"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    type="text"
+    value=""
+  />
+  <input
+    className="search-btn"
+    onClick={[Function]}
+    type="submit"
+    value=""
+  />
+</div>
+`;

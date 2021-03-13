@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route /*Link */,
+} from "react-router-dom";
+
+// Routes
+import Home from "./routes/Home";
+import Options from "./routes/Options";
+import ButtonExample from "./routes/ButtonExample";
+import InputTextExample from "./routes/InputTextExample";
+import InputNumberExample from "./routes/InputNumberExample";
+import SelectExample from "./routes/SelectExample";
+import AutocompleteExample from "./routes/AutocompleteExample";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/options" component={Options} />
+          <Route path="/button" component={ButtonExample} />
+          <Route path="/inputtext" component={InputTextExample} />
+          <Route path="/inputnumber" component={InputNumberExample} />
+          <Route path="/select" component={SelectExample} />
+          <Route path="/autocomplete" component={AutocompleteExample} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
