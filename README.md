@@ -1,44 +1,65 @@
-### Install libraries and dependencies
+# Instructive
 
-# Easy way
+## First step
+
+Copy this repository locally into your computer
+
+## Second step
+
+Install libraries and dependencies
+
+### Easy way
 
 Just write `npm install` into the console
 
-# Hard way
+### Hard way
 
-Write these commands into the console
+Write these commands into the console and execute them one at a time:
 
-('-g' optional parameter to install the library globaly)
-('-D' is to install development dependencies)
-('--save' is to install production dependencies)
+	npm install -g create-react-app
+	npm install react-redux
+	npm install react-router-dom
+	npm i -D eslint babel-eslint eslint-plugin-react
+	npm install --save prop-types
+	npm install --save classnames
+	npm install axios
+	npm install --save @ant-design/icons
+	npm install react-select
+	npm install react-number-format
+	
+#### Some notes:
+* '-g' optional parameter to install the library globaly
+*	'-D' is to install development dependencies
+*	'--save' is to install production dependencies
+	
+#### In case that you want more information about these libraries links below:
+- [create-react-app](https://github.com/facebook/create-react-app)
+- [react-redux](https://react-redux.js.org/)
+- [react-router-dom](https://reactrouter.com/web/guides/philosophy)
+-	[eslint babel-eslint](https://github.com/babel/babel-eslint)
+-	[eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+-	[prop-types](https://github.com/facebook/prop-types)
+- [classnames](https://github.com/JedWatson/classnames)
+- [axios](https://github.com/axios/axios)
+-	[@ant-design/icons](https://ant.design/components/icon/)
+-	[react-select](https://react-select.com/home)
+-	[react-number-format](https://github.com/s-yadav/react-number-format)
 
-`npm install -g create-react-app`
-`npm install react-redux`
-`npm install react-router-dom`
-`npm i -D eslint babel-eslint eslint-plugin-react`
-`npm install --save prop-types`
-`npm install --save classnames`
-`npm install axios`
-`npm install --save @ant-design/icons`
+### Testing
 
-`npm install react-select`
-`npm install react-number-format`
+For testing components, sites, etc. Install these libraries.
+(Note: there are not obligatory install them to use the app)
 
-# Testing
+	npm install -d @testing-library/react
+	npm install -d @testing-library/jest-dom
+	
+To see more information and uses about [@testing-library](https://github.com/testing-library/react-testing-library)
+	
+	npm install -d react-test-renderer
+	
+More information and uses about [react-test-renderer](https://reactjs.org/docs/test-renderer.html)
 
-`npm install -d @testing-library/react`
-`npm install -d @testing-library/jest-dom`
-`npm install -d react-test-renderer`
-
-# This project was styled by Prettier
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### Initialize a new project
-
-npm create-react-app mooveit_challenge
+## This project was styled by [Prettier](https://prettier.io/) and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
