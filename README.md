@@ -1,26 +1,36 @@
 ### Install libraries and dependencies
 
+# Easy way
+
+Just write `npm install` into the console
+
+# Hard way
+
+Write these commands into the console
+
 ('-g' optional parameter to install the library globaly)
 ('-D' is to install development dependencies)
 ('--save' is to install production dependencies)
 
-npm install -g create-react-app
-npm install react-redux
-npm install react-router-dom
-npm i -D eslint babel-eslint eslint-plugin-react
-npm install --save prop-types
-npm install --save classnames
-npm install axios
-npm install --save @ant-design/icons
+`npm install -g create-react-app`
+`npm install react-redux`
+`npm install react-router-dom`
+`npm i -D eslint babel-eslint eslint-plugin-react`
+`npm install --save prop-types`
+`npm install --save classnames`
+`npm install axios`
+`npm install --save @ant-design/icons`
 
-npm install react-select
-npm install react-number-format
+`npm install react-select`
+`npm install react-number-format`
 
 # Testing
 
-npm install -d @testing-library/react
-npm install -d @testing-library/jest-dom
-npm install -d react-test-renderer
+`npm install -d @testing-library/react`
+`npm install -d @testing-library/jest-dom`
+`npm install -d react-test-renderer`
+
+# This project was styled by Prettier
 
 # Getting Started with Create React App
 

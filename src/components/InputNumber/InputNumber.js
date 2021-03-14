@@ -7,13 +7,6 @@ import NumberFormat from "react-number-format";
 import Button from "../Button/Button";
 
 class InputNumber extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isOnLimit: false };
-    this.handleInputChange.bind(this);
-    this.numberLimits.bind(this);
-  }
-
   // Definition of props types to this component
   static propTypes = {
     onChange: PropTypes.func,
@@ -44,23 +37,34 @@ class InputNumber extends Component {
     mask: "",
   };
 
+  // Initializing state params of this component
+  state = { isOnLimit: false };
+
+  // Function that handles the user input
   handleInputChange = (formattedValue, value) => {
     const { onChange, disabled, minValue, maxValue } = this.props;
 
+    // If it is disabled do nothing
     if (disabled) {
       return;
     }
 
+    // If the father component passed a function, the input number calls it
     if (onChange) {
+      // If the father component passed minimum value, maximum value or both,
+      // it checks if the input is within the bounds
       if (this.numberLimits(parseInt(value), minValue, maxValue)) {
         this.setState({ isOnLimit: true });
         onChange(formattedValue);
       } else {
+        // If the input value does not comply with the limits, it does not
+        // perform any action
         this.setState({ isOnLimit: false });
       }
     }
   };
 
+  // Function that verify if an input is within the bounds
   numberLimits = (number, minValue, maxValue) => {
     if (typeof minValue === "number") {
       if (minValue > number) {
@@ -75,8 +79,10 @@ class InputNumber extends Component {
     return true;
   };
 
+  // Function that handles the reset action, erasing all the input
   resetInputValue = () => {
     const { onChange } = this.props;
+
     if (onChange) {
       onChange("");
     }
@@ -99,9 +105,12 @@ class InputNumber extends Component {
       prefix,
       suffix,
     } = this.props;
+    const { handleInputChange, resetInputValue } = this;
 
+    // Import style of the css file
     const styles = require("./style.module.css");
 
+    // Handling the different styles
     const _className = cx(className, styles[size], styles[variant], {
       [styles.disabled]: disabled,
       [styles.error]:
@@ -119,7 +128,7 @@ class InputNumber extends Component {
           thousandSeparator={true}
           isNumericString={false}
           onValueChange={({ formattedValue, value }) =>
-            this.handleInputChange(formattedValue, value)
+            handleInputChange(formattedValue, value)
           }
           disabled={disabled}
           format={format}
@@ -130,7 +139,7 @@ class InputNumber extends Component {
           data-testid="input-number"
         />
         {reset && value.length > 0 ? (
-          <Button label="X" variant="reset" onClick={this.resetInputValue} />
+          <Button label="X" variant="reset" onClick={resetInputValue} />
         ) : null}
       </div>
     );

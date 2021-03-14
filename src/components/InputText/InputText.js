@@ -39,18 +39,22 @@ class Input extends Component {
     reset: false,
   };
 
+  // Function that handles the user input
   handleInputChange = (event) => {
     const { onChange, disabled } = this.props;
 
+    // If it is disabled do nothing
     if (disabled) {
       return;
     }
 
+    // If the father component passed a function, the input number calls it
     if (onChange) {
       onChange(event.target.value);
     }
   };
 
+  // Function that handles the reset action, erasing all the input
   resetInputValue = () => {
     const { onChange } = this.props;
     if (onChange) {
@@ -58,17 +62,21 @@ class Input extends Component {
     }
   };
 
+  // Function that handles what will be shown inside the input text
   renderChildren = () => {
     const { placeholder, children } = this.props;
 
+    // Case to show only a placeholder
     if (placeholder) {
       return placeholder;
     }
 
+    // Case to show a placeholder with an icon or another component
     if (children) {
       return children;
     }
 
+    // Default case
     return "";
   };
 
@@ -88,8 +96,10 @@ class Input extends Component {
       reset,
     } = this.props;
 
+    // Import style of the css file
     const styles = require("./style.module.css");
 
+    // Handling the different styles
     const _className = cx(className, styles[size], styles[variant], {
       [styles.disabled]: disabled,
       [styles.error]:
@@ -97,6 +107,7 @@ class Input extends Component {
       [disabledClassName]: disabled,
     });
 
+    // Handling the differents types of inputs
     const InputElement = textarea ? "textarea" : "input";
 
     return (

@@ -29,7 +29,7 @@ export default function Options() {
           Link of the repository clicking{" "}
           <a
             className="link"
-            href="https://github.com/Sebahammer97/mooveit_challenge"
+            href="https://github.com/Sebahammer97/MooveIt_Challenge"
           >
             here
           </a>

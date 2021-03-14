@@ -25,30 +25,37 @@ class Button extends Component {
     disabledClassName: "",
   };
 
+  // Function that handles when the user did a click on this button
   handleButtonClick = (event) => {
     const { onClick, disabled } = this.props;
 
+    // If it is disabled do nothing
     if (disabled) {
       return;
     }
 
+    // If the father component passed a function, the button calls it
     onClick &&
       onClick({
         event,
       });
   };
 
+  // Function that handles what will be shown inside the button
   renderChildren = () => {
     const { label, children } = this.props;
 
+    // Case to show only a label
     if (label !== "Button") {
       return label;
     }
 
+    // Case to show a label with an icon or another component
     if (children) {
       return children;
     }
 
+    // Default case
     return "Button";
   };
 
@@ -61,8 +68,10 @@ class Button extends Component {
       disabledClassName,
     } = this.props;
 
+    // Import style of the css file
     const styles = require("./style.module.css");
 
+    // Handling the different styles
     const _className = cx(
       className,
       styles[size],

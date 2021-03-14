@@ -22,7 +22,7 @@ export default function ButtonExample() {
             <p className="title">Default button with a functionality</p>
             <p className="description">
               This button triggers a functionality, in this case is a counter.
-              Also this type is the default button.
+              Also this example is the default button.
             </p>
             <Button label="Click me!" onClick={() => setCounter(counter + 1)} />
 
