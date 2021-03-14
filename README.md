@@ -6,7 +6,7 @@ Copy this repository locally into your computer
 
 ## Second step
 
-Install libraries and dependencies
+Install dependencies
 
 ### Easy way
 
