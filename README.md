@@ -8,15 +8,12 @@ Copy this repository locally into your computer
 
 Install dependencies
 
-### Easy way
+## Third step
 
 Just write `npm install` into the console
 
-### Hard way
-
-Write these commands into the console and execute them one at a time:
-
-	npm install -g create-react-app
+## Libraries used in this project
+	
 	npm install react-redux
 	npm install react-router-dom
 	npm i -D eslint babel-eslint eslint-plugin-react
@@ -33,7 +30,7 @@ Write these commands into the console and execute them one at a time:
 *	'--save' is to install production dependencies
 	
 #### In case that you want more information about these libraries links below:
-- [create-react-app](https://github.com/facebook/create-react-app)
+
 - [react-redux](https://react-redux.js.org/)
 - [react-router-dom](https://reactrouter.com/web/guides/philosophy)
 -	[eslint babel-eslint](https://github.com/babel/babel-eslint)
