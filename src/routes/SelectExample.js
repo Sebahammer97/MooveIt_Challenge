@@ -87,6 +87,19 @@ export default function SelectExample() {
           multiSelect={true}
           closeMenuOnSelect={false}
         />
+
+        <pre>
+          <p className="codeExample">
+            {"<Select \n" +
+              "   optionsList={options} \n" +
+              "   valueArr={selectPlaceholder} \n" +
+              "   placeholder='Customize your placeholder' \n" +
+              "   handleChange={(value) => setSelectPlaceholder(value)} \n" +
+              "   multiSelect={true} \n" +
+              "   closeMenuOnSelect={false} \n" +
+              "/>"}
+          </p>
+        </pre>
       </header>
     </div>
   );

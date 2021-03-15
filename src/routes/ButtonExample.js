@@ -32,6 +32,14 @@ export default function ButtonExample() {
                 {counter === 1 ? "time" : "times"}
               </p>
             ) : null}
+            <pre>
+              <p className="codeExample">
+                {"<Button \n" +
+                  "   label='Click me!' \n" +
+                  "   onClick={() => setCounter(counter + 1)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
           <div className="column">
             <p className="title">Button disabled</p>
@@ -40,6 +48,14 @@ export default function ButtonExample() {
               the button. The value default is false.
             </p>
             <Button label="Disabled" disabled={true} />
+            <pre>
+              <p className="codeExample">
+                {"<Button \n" +
+                  "   label='Disabled' \n" +
+                  "   disabled={true} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
         </div>
 
@@ -80,6 +96,16 @@ export default function ButtonExample() {
             </Button>
           </div>
         </div>
+        <div className="row">
+          <pre>
+            <p className="codeExample">
+              {"<Button \n" +
+                "   label='Primary' \n" +
+                "   variant='primary' \n" +
+                "/>"}
+            </p>
+          </pre>
+        </div>
 
         <p className="title">Size</p>
         <p className="description-row">
@@ -101,6 +127,16 @@ export default function ButtonExample() {
             <p className="title">Big button</p>
             <Button size="large" label="Big size button" />
           </div>
+        </div>
+        <div className="row">
+          <pre>
+            <p className="codeExample">
+              {"<Button \n " +
+                "   size='small' \n" +
+                "   label='Small size button' \n" +
+                "/>"}
+            </p>
+          </pre>
         </div>
       </header>
     </div>

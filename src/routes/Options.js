@@ -13,17 +13,17 @@ export default function Options() {
       <header className="App-header">
         <p> Options </p>
 
-        <Button label="Button" onClick={() => history.push("/button")} />
-        <Button label="Input Text" onClick={() => history.push("/inputtext")} />
-        <Button
-          label="Input Number"
-          onClick={() => history.push("/inputnumber")}
-        />
-        <Button label="Select Input" onClick={() => history.push("/select")} />
         <Button
           label="Autocomplete"
           onClick={() => history.push("/autocomplete")}
         />
+        <Button label="Button" onClick={() => history.push("/button")} />
+        <Button
+          label="Input Number"
+          onClick={() => history.push("/inputnumber")}
+        />
+        <Button label="Input Text" onClick={() => history.push("/inputtext")} />
+        <Button label="Select Input" onClick={() => history.push("/select")} />
 
         <p>
           Link of the repository clicking{" "}

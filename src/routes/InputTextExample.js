@@ -42,6 +42,16 @@ export default function InputTextExample() {
             {textDefault !== "" ? (
               <p className="description">You wrote: "{textDefault}"</p>
             ) : null}
+            <pre>
+              <p className="codeExample">
+                {"<InputText \n" +
+                  "   type='text' \n" +
+                  "   placeholder='Write me!' \n" +
+                  "   value={textDefault} \n" +
+                  "   onChange={(value) => setTextDefault(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
         </div>
 
@@ -58,6 +68,7 @@ export default function InputTextExample() {
             <InputText
               type="text"
               size="small"
+              placeholder="Small Input"
               value={textSizes}
               onChange={(value) => setTextSizes(value)}
             />
@@ -67,6 +78,7 @@ export default function InputTextExample() {
             <InputText
               type="text"
               value={textSizes}
+              placeholder="Default input"
               onChange={(value) => setTextSizes(value)}
             />
           </div>
@@ -75,10 +87,24 @@ export default function InputTextExample() {
             <InputText
               type="text"
               size="large"
+              placeholder="Large input"
               value={textSizes}
               onChange={(value) => setTextSizes(value)}
             />
           </div>
+        </div>
+        <div className="row">
+          <pre>
+            <p className="codeExample">
+              {"<InputText \n" +
+                "   type='text' \n" +
+                "   size='large' \n" +
+                "   placeholder='Large input' \n" +
+                "   value={textSizes} \n" +
+                "   onChange={(value) => setTextSizes(value)} \n" +
+                "/>"}
+            </p>
+          </pre>
         </div>
 
         <p className="title">Input Text disabled</p>
@@ -93,6 +119,16 @@ export default function InputTextExample() {
           <div className="column">
             <InputText type="text" textarea={true} disabled={true} value="" />
           </div>
+        </div>
+        <div className="row">
+          <pre>
+            <p className="codeExample">
+              {"<InputText \n" +
+                "   type='text' \n" +
+                "   disabled='true' \n" +
+                "/>"}
+            </p>
+          </pre>
         </div>
 
         <div className="row">
@@ -109,6 +145,16 @@ export default function InputTextExample() {
               value={textDark}
               onChange={(value) => setTextDark(value)}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputText \n" +
+                  "   type='text' \n" +
+                  "   variant='dark' \n" +
+                  "   value={textDark} \n" +
+                  "   onChange={(value) => setTextDark(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
           <div className="column">
             <p className="title">Input Textarea</p>
@@ -122,6 +168,16 @@ export default function InputTextExample() {
               value={textArea}
               onChange={(value) => setTextArea(value)}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputText \n" +
+                  "   type='text' \n" +
+                  "   textarea={true} \n" +
+                  "   value={textArea} \n" +
+                  "   onChange={(value) => setTextArea(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
         </div>
 
@@ -145,6 +201,17 @@ export default function InputTextExample() {
             <p className="description">
               Size of characters wrote: "{textWithLimit.length}"
             </p>
+            <pre>
+              <p className="codeExample">
+                {"<InputText \n" +
+                  "   type='text' \n" +
+                  "   minLength={3} \n" +
+                  "   maxLength={10} \n" +
+                  "   value={textWithLimit} \n" +
+                  "   onChange={(value) => setTextWithLimit(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
           <div className="column">
             <p className="title">Input Text with reset button</p>
@@ -159,6 +226,16 @@ export default function InputTextExample() {
               reset={true}
               onChange={(value) => setTextWithReset(value)}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputText \n" +
+                  "   type='text' \n" +
+                  "   value={textWithReset} \n" +
+                  "   reset={true} \n" +
+                  "   onChange={(value) => setTextWithReset(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
         </div>
 
@@ -175,6 +252,16 @@ export default function InputTextExample() {
               reset={true}
               onChange={(value) => setPassword(value)}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputText \n" +
+                  "   type='password' \n" +
+                  "   value={password} \n" +
+                  "   reset={true} \n" +
+                  "   onChange={(value) => setPassword(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
           <div className="column">
             <p className="title">Input Text email</p>
@@ -189,6 +276,16 @@ export default function InputTextExample() {
               reset={true}
               onChange={(value) => setEmail(value)}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputText \n" +
+                  "   type='email' \n" +
+                  "   value={email} \n" +
+                  "   reset={true} \n" +
+                  "   onChange={(value) => setEmail(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
         </div>
 
@@ -206,6 +303,19 @@ export default function InputTextExample() {
             onChange={(value) => setTextPlaceholder(value)}
             placeholder={"Write me a joke"}
           />
+        </div>
+        <div className="row">
+          <pre>
+            <p className="codeExample">
+              {"<InputText \n" +
+                "   type='text' \n" +
+                "   textarea={true} \n" +
+                "   value={textPlaceholder} \n" +
+                "   onChange={(value) => setTextPlaceholder(value)} \n" +
+                "   placeholder={'Write me a joke'} \n" +
+                "/>"}
+            </p>
+          </pre>
         </div>
       </header>
     </div>

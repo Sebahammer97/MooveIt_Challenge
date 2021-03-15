@@ -57,6 +57,17 @@ export default function AutocompleteExample() {
         />
 
         {input !== "" ? <p>You are trying to search "{input}"</p> : null}
+
+        <pre>
+          <p className="codeExample">
+            {"<Autocomplete \n" +
+              "   options={options} \n" +
+              "   onSelect={handleSelect} \n" +
+              "   onSubmit={handleSubmit} \n" +
+              "   userInput={input} \n" +
+              "/>"}
+          </p>
+        </pre>
       </header>
     </div>
   );

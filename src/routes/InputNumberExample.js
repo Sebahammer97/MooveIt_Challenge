@@ -38,6 +38,14 @@ export default function InputNumberExample() {
               onChange={(value) => setNumber(value)}
             />
             {number.length > 0 ? <p>You wrote N°: {number}</p> : null}
+            <pre>
+              <p className="codeExample">
+                {"<InputNumber \n" +
+                  "   value={number} \n" +
+                  "   onChange={(value) => setNumber(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
         </div>
 
@@ -56,6 +64,7 @@ export default function InputNumberExample() {
               size="small"
               value={numberSizes}
               onChange={(value) => setNumberSizes(value)}
+              placeholder="Small input"
             />
           </div>
           <div className="column">
@@ -63,6 +72,7 @@ export default function InputNumberExample() {
             <InputNumber
               value={numberSizes}
               onChange={(value) => setNumberSizes(value)}
+              placeholder="Default input"
             />
           </div>
           <div className="column">
@@ -71,8 +81,21 @@ export default function InputNumberExample() {
               size="large"
               value={numberSizes}
               onChange={(value) => setNumberSizes(value)}
+              placeholder="Large input"
             />
           </div>
+        </div>
+        <div className="row">
+          <pre>
+            <p className="codeExample">
+              {"<InputNumber \n" +
+                "   size='medium' \n" +
+                "   value={numberSizes} \n" +
+                "   onChange={(value) => setNumberSizes(value)} \n" +
+                "   placeholder='Default input' \n" +
+                "/>"}
+            </p>
+          </pre>
         </div>
 
         <div className="row">
@@ -88,6 +111,15 @@ export default function InputNumberExample() {
               variant="dark"
               onChange={(value) => setNumberDark(value)}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputNumber \n" +
+                  "   variant='dark' \n" +
+                  "   value={numberDark} \n" +
+                  "   onChange={(value) => setNumberDark(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
           <div className="column">
             <p className="title">Input number limit</p>
@@ -103,6 +135,16 @@ export default function InputNumberExample() {
               minValue={0}
               maxValue={100}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputNumber \n" +
+                  "   minValue={0} \n" +
+                  "   maxValue={100} \n" +
+                  "   value={numberWithLimits} \n" +
+                  "   onChange={(value) => setNumberWithLimits(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
         </div>
 
@@ -114,6 +156,14 @@ export default function InputNumberExample() {
               property with a true value.
             </p>
             <InputNumber disabled={true} value={"0"} />
+            <pre>
+              <p className="codeExample">
+                {"<InputNumber \n" +
+                  "   disabled={true} \n" +
+                  "   value={'0'} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
           <div className="column">
             <p className="title">Input Number with reset button</p>
@@ -127,6 +177,15 @@ export default function InputNumberExample() {
               onChange={(value) => setNumberWithReset(value)}
               reset={true}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputNumber \n" +
+                  "   reset={true} \n" +
+                  "   value={numberWithReset} \n" +
+                  "   onChange={(value) => setNumberWithReset(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
         </div>
 
@@ -167,6 +226,19 @@ export default function InputNumberExample() {
             />
           </div>
         </div>
+        <div className="row">
+          <pre>
+            <p className="codeExample">
+              {"<InputNumber \n" +
+                "   placeholder='####-####-####-####' \n" +
+                "   format='####-####-####-####' \n" +
+                "   mask='#' \n" +
+                "   value={creditCard} \n" +
+                "   onChange={(value) => setCreditCard(value)} \n" +
+                "/>"}
+            </p>
+          </pre>
+        </div>
 
         <div className="row">
           <div className="column">
@@ -181,6 +253,15 @@ export default function InputNumberExample() {
               value={numberWithPrefix}
               onChange={(value) => setNumberWithPrefix(value)}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputNumber \n" +
+                  "   prefix='U$D ' \n" +
+                  "   value={numberWithPrefix} \n" +
+                  "   onChange={(value) => setNumberWithPrefix(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
           <div className="column">
             <p className="title">Input number with a sufix</p>
@@ -195,6 +276,15 @@ export default function InputNumberExample() {
               value={numberWithSuffix}
               onChange={(value) => setNumberWithSuffix(value)}
             />
+            <pre>
+              <p className="codeExample">
+                {"<InputNumber \n" +
+                  "   suffix=' likes' \n" +
+                  "   value={numberWithSuffix} \n" +
+                  "   onChange={(value) => setNumberWithSuffix(value)} \n" +
+                  "/>"}
+              </p>
+            </pre>
           </div>
         </div>
       </header>

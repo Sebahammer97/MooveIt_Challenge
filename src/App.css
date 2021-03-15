@@ -66,3 +66,11 @@
 .label-button {
   padding-right: 0.3em;
 }
+
+.codeExample {
+  border: 1px solid white;
+  padding: 5px;
+  font-size: large;
+  text-align: initial;
+  background-color: black;
+}

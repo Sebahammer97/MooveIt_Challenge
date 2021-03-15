@@ -34,7 +34,7 @@ export class CustomSelect extends Component {
     } = this.props;
 
     const customStyle = {
-      container: (styles) => ({ ...styles, width: "15em" }),
+      container: (styles) => ({ ...styles, width: "15em", margin: "auto" }),
       control: (styles) => ({ ...styles, backgroundColor: "white" }),
       option: (styles, { isDisabled, isFocused, isSelected }) => {
         return {
