@@ -49,7 +49,6 @@ it("renders autocomplete input text correctly", () => {
 it("renders autocomplete keydowns", () => {
   const utils = render(<AutocompleteTest />);
   const autocomplete = utils.getByTestId("autocomplete");
-  //const input = within(autocomplete).querySelector("input");
 
   autocomplete.focus();
   fireEvent.change(autocomplete, { target: { value: "b" } });

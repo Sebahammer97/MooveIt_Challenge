@@ -3,6 +3,7 @@
 exports[`matches snapshots select 1`] = `
 <div
   className="select"
+  data-testid="select"
 >
   <div
     className=" css-19w2dkt-container"
@@ -17,9 +18,9 @@ exports[`matches snapshots select 1`] = `
         className=" css-g1d714-ValueContainer"
       >
         <div
-          className=" css-1wh03ml-singleValue"
+          className=" css-eyu88q-placeholder"
         >
-          Red
+          Select an option
         </div>
         <div
           className="css-19wvcrp-Input"

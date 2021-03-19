@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Select from "../Select";
 
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import renderer from "react-test-renderer";
 
@@ -33,7 +33,18 @@ it("renders without crashing", () => {
 
 it("renders select one item correctly", () => {
   const utils = render(<SelectTest />);
-  expect(utils.getAllByText("Red")[0]).toBeInTheDocument();
+  const container = utils.getByTestId("select");
+  const select = container.firstChild;
+
+  expect(select).toBeDefined();
+  expect(select).not.toBeNull();
+
+  select.focus();
+  fireEvent.keyDown(select, { keyCode: 40 }); // Key Down
+  fireEvent.keyDown(select, { keyCode: 40 }); // Key Down
+  fireEvent.keyDown(select, { keyCode: 13 }); // Key Enter
+
+  expect(select.textContent).toEqual("Blue");
 });
 
 it("matches snapshots select", () => {

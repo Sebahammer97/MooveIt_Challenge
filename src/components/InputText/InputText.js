@@ -1,48 +1,31 @@
-import React, { Component } from "react";
+// Dependencies
+import React from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
+
+// Style
+import styles from "./style.module.css";
 
 // Components
 import Button from "../Button/Button";
 
-class Input extends Component {
-  // Definition of props types to this component
-  static propTypes = {
-    onChange: PropTypes.func,
-    className: PropTypes.string,
-    placeholder: PropTypes.string,
-    value: PropTypes.string,
-    variant: PropTypes.string,
-    size: PropTypes.string,
-    disabledClassName: PropTypes.string,
-    disabled: PropTypes.bool,
-    type: PropTypes.string.isRequired,
-    minLength: PropTypes.number,
-    maxLength: PropTypes.number,
-    textarea: PropTypes.bool,
-    reset: PropTypes.bool,
-  };
-
-  // Assigning default values for the props
-  static defaultProps = {
-    className: "input",
-    placeholder: "",
-    value: "",
-    variant: "default",
-    disabled: false,
-    disabledClassName: "",
-    size: "medium",
-    type: "text",
-    minLength: 0,
-    maxLength: 9999,
-    textarea: false,
-    reset: false,
-  };
-
+function InputText({
+  className,
+  type,
+  value,
+  placeholder,
+  size,
+  minLength,
+  maxLength,
+  variant,
+  disabled,
+  disabledClassName,
+  textarea,
+  reset,
+  onChange,
+}) {
   // Function that handles the user input
-  handleInputChange = (event) => {
-    const { onChange, disabled } = this.props;
-
+  const handleInputChange = (event) => {
     // If it is disabled do nothing
     if (disabled) {
       return;
@@ -55,80 +38,74 @@ class Input extends Component {
   };
 
   // Function that handles the reset action, erasing all the input
-  resetInputValue = () => {
-    const { onChange } = this.props;
+  const resetInputValue = () => {
     if (onChange) {
       onChange("");
     }
   };
 
-  // Function that handles what will be shown inside the input text
-  renderChildren = () => {
-    const { placeholder, children } = this.props;
+  // Handling the different styles
+  const _className = cx(className, styles[size], styles[variant], {
+    [styles.disabled]: disabled,
+    [styles.error]:
+      value.length < minLength || (maxLength && value.length > maxLength),
+    [disabledClassName]: disabled,
+  });
 
-    // Case to show only a placeholder
-    if (placeholder) {
-      return placeholder;
-    }
+  // Handling the differents types of inputs
+  const InputElement = textarea ? "textarea" : "input";
 
-    // Case to show a placeholder with an icon or another component
-    if (children) {
-      return children;
-    }
-
-    // Default case
-    return "";
-  };
-
-  render() {
-    const {
-      className,
-      type,
-      value,
-      placeholder,
-      size,
-      minLength,
-      maxLength,
-      variant,
-      disabled,
-      disabledClassName,
-      textarea,
-      reset,
-    } = this.props;
-
-    // Import style of the css file
-    const styles = require("./style.module.css");
-
-    // Handling the different styles
-    const _className = cx(className, styles[size], styles[variant], {
-      [styles.disabled]: disabled,
-      [styles.error]:
-        value.length < minLength || (maxLength && value.length > maxLength),
-      [disabledClassName]: disabled,
-    });
-
-    // Handling the differents types of inputs
-    const InputElement = textarea ? "textarea" : "input";
-
-    return (
-      <div>
-        <InputElement
-          className={_className}
-          type={type}
-          value={value}
-          placeholder={placeholder}
-          minLength={minLength}
-          maxLength={maxLength}
-          onChange={this.handleInputChange}
-          disabled={disabled}
-          data-testid="input-text"
-        />
-        {reset && value.length > 0 ? (
-          <Button label="X" variant="reset" onClick={this.resetInputValue} />
-        ) : null}
-      </div>
-    );
-  }
+  return (
+    <div>
+      <InputElement
+        className={_className}
+        type={type}
+        value={value}
+        placeholder={placeholder}
+        minLength={minLength}
+        maxLength={maxLength}
+        onChange={handleInputChange}
+        disabled={disabled}
+        data-testid="input-text"
+      />
+      {reset && !!value.length > 0 && (
+        <Button label="X" variant="reset" onClick={resetInputValue} />
+      )}
+    </div>
+  );
 }
 
-export default Input;
+// Definition of props types to this component
+InputText.propTypes = {
+  onChange: PropTypes.func,
+  className: PropTypes.string,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  variant: PropTypes.string,
+  size: PropTypes.string,
+  disabledClassName: PropTypes.string,
+  disabled: PropTypes.bool,
+  type: PropTypes.string.isRequired,
+  minLength: PropTypes.number,
+  maxLength: PropTypes.number,
+  textarea: PropTypes.bool,
+  reset: PropTypes.bool,
+};
+
+// Assigning default values for the props
+InputText.defaultProps = {
+  className: "input",
+  placeholder: "",
+  value: "",
+  variant: "default",
+  disabled: false,
+  disabledClassName: "",
+  size: "medium",
+  type: "text",
+  minLength: 0,
+  maxLength: 9999,
+  textarea: false,
+  reset: false,
+};
+
+export default InputText;
